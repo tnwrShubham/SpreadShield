@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: epidemic-simulator
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20
+      - key: MONGO_URI
+        sync: false
